@@ -674,3 +674,87 @@ st.download_button(
     file_name="telangana_water_filtered.csv",
     mime="text/csv",
 )
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PAGE 9 — README / ABOUT
+# ══════════════════════════════════════════════════════════════════════════════
+st.markdown("---")
+st.title("📖 About This Dashboard")
+
+st.markdown("""
+## Telangana Water Stress Dashboard
+
+An interactive data visualization dashboard for analyzing water stress patterns across **25 districts of Telangana**,
+covering **2015–2024** with monthly granularity across **20,160 records**.
+
+### Purpose
+Help environmental analysts, policy makers, and government agencies monitor water scarcity,
+track seasonal variations, and identify high-risk regions through intuitive visual analytics.
+""")
+
+with st.expander("📊 Dataset Overview", expanded=True):
+    st.markdown("""
+| Feature | Description |
+|---|---|
+| `district` | 25 Telangana districts |
+| `year` | 2015 – 2024 |
+| `month` | 1 – 12 |
+| `population` | District population |
+| `rainfall` | Monthly rainfall (mm) |
+| `groundwater` | Groundwater level (m below surface) |
+| `temperature` | Average temperature (°C) |
+| `water_usage` | Daily water usage (MLD) |
+| `storage_capacity` | Reservoir/dam capacity (MLD) |
+| `urbanization_rate` | % urban population |
+| `region_type` | Urban / Semi-Urban / Rural |
+| `water_source` | Groundwater / Surface Water / Mixed |
+| `rainfall_category` | High / Medium / Low |
+| `season` | Winter / Summer / Monsoon |
+| `wsi` | Water Stress Index (0–1, higher = more stressed) |
+| `stress_level` | Low / Medium |
+| `water_stress_ratio` | Usage / Availability ratio |
+| `water_availability` | Available water resources (MLD) |
+| `high_risk_flag` | Binary risk indicator |
+    """)
+
+with st.expander("🗂️ Dashboard Sections", expanded=False):
+    st.markdown("""
+| # | Page | Content |
+|---|------|---------|
+| 1 | **Overview** | KPI cards, yearly trends, stress distribution, correlation heatmap |
+| 2 | **Water Stress Deep Dive** | District WSI/ratio bars, bubble scatter, year×district heatmap |
+| 3 | **Rainfall & Groundwater** | Seasonal trends, category bars, rainfall vs groundwater scatter |
+| 4 | **Water Usage & Availability** | Yearly trends, district×region grouped bars, side-by-side comparison |
+| 5 | **Seasonal Analysis** | Seasonal metrics grid, WSI box plots, monthly patterns |
+| 6 | **Urbanization & Water Source** | Region/source box plots, trends, stacked bars, storage vs usage |
+| 7 | **District Comparator** | Multi-select comparison table, radar charts, comparative bars |
+| 8 | **Raw Data Explorer** | Full filtered dataset + CSV download |
+
+### Global Filters (Sidebar)
+All pages are filtered by **Year Range**, **District**, **Region Type**, and **Season**.
+    """)
+
+with st.expander("⚙️ Tech Stack", expanded=False):
+    st.markdown("""
+- **Streamlit** — web framework
+- **Plotly Express & GraphObjects** — interactive charts
+- **Pandas** — data processing
+- **Matplotlib** — styling support
+    """)
+
+with st.expander("🚀 Run Locally", expanded=False):
+    st.code("""
+# Clone the repo
+git clone https://github.com/Dhana180/-water-stress-dashboard.git
+cd -water-stress-dashboard
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+    """, language="bash")
+
+st.markdown("---")
+st.caption("Built with Streamlit · Data: Telangana Water Stress Dataset · 2024")
+
