@@ -65,7 +65,7 @@ def section_header(title, icon="📊"):
 # ══════════════════════════════════════════════════════════════════════════════
 # SIDEBAR
 # ══════════════════════════════════════════════════════════════════════════════
-st.sidebar.markdown("## 💧 Telangana Water Stress")
+st.sidebar.markdown("## 💧 JalAlert")
 st.sidebar.markdown("**Analysis Dashboard**")
 st.sidebar.divider()
 
