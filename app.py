@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Telangana Water Stress Dashboard",
+    page_title="JalAlert: Telangana Water Stress Dashboard",
     layout="wide",
     page_icon="💧",
 )
