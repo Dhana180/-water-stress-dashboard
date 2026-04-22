@@ -103,7 +103,7 @@ st.sidebar.caption(f"📁 {len(df_f):,} rows selected  |  Total: {len(df):,} row
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGE 1 — OVERVIEW / HOME
 # ══════════════════════════════════════════════════════════════════════════════
-st.title(f"{PAGE_ICON} Telangana Water Stress — Overview")
+st.title(f"{PAGE_ICON} JalAlert")
 
 col1, col2, col3, col4 = st.columns(4)
 avg_wsi   = df_f["wsi"].mean()
